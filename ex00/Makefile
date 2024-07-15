@@ -20,13 +20,14 @@ PURPLE  = \033[1;35m
 CYAN    = \033[1;36m
 WHITE   = \033[1;37m
 
-NAME = megaphone
+NAME = braiiiiiiinnnzzzZ
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -g -std=c++98
 RM = rm -rf
 
-SRCS = Zombie.cpp \
+SRCS = main.cpp \
+		Zombie.cpp \
 		newZombie.cpp \
 		randomChump.cpp \
 

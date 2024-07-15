@@ -12,3 +12,12 @@
 
 #include "Zombie.h"
 
+int	main() {
+	Zombie* zombie = newZombie("Brozola");
+	zombie->announce();
+
+	randomChump("Irmoum");
+
+	delete zombie;
+	return 0;
+}

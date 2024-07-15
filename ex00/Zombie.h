@@ -21,8 +21,17 @@ class Zombie {
 		std::string	name;
 
 	public:
+		//Constructor
+		Zombie(const std::string &inputName);
+
+		//Destructor
+		~Zombie();
+
 		void	announce(void);
 };
 
+void	randomChump(std::string name);
+
+Zombie*	newZombie(std::string name);
 
 #endif //CPP01_ZOMBIE_H

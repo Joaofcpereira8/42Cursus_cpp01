@@ -12,4 +12,14 @@
 
 #include "Zombie.h"
 
-void	Zombie::announce() {}
+void	Zombie::announce(void) {
+	std::cout << name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+}
+
+Zombie::Zombie(const std::string &inputName) {
+	name = inputName;
+}
+
+Zombie::~Zombie() {
+	std::cout << name << " was destroyed!" << std::endl;
+}

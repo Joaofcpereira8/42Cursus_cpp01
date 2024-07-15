@@ -11,3 +11,8 @@
 /* ************************************************************************** */
 
 #include "Zombie.h"
+
+void	randomChump(std::string name) {
+	Zombie anotherZombie(name);
+	anotherZombie.announce();
+}
