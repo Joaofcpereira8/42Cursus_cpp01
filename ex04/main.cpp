@@ -5,25 +5,28 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jofilipe <jofilipe@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/18 12:49:03 by jofilipe          #+#    #+#             */
-/*   Updated: 2024/07/18 12:49:04 by jofilipe         ###   ########.fr       */
+/*   Created: 2024/07/18 18:22:43 by jofilipe          #+#    #+#             */
+/*   Updated: 2024/07/18 18:22:47 by jofilipe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
+#include <fstream>
 
-int	main() {
-	std::string	string = "HI THIS IS BRAIN";
-	std::string	*stringPTR = &string;
-	std::string	&stringREF = string;
+int	main(int ac, char **av) {
+	if (ac == 4) {
+		std::string line;
+		std::ifstream file(av[1]);
 
-	//Print address
-	std::cout << "Normal string: " << &string << std::endl;
-	std::cout << "Pointer string: "<< &stringPTR << std::endl;
-	std::cout << "Reference string: " << &stringREF << std::endl;
+		if (file.is_open())
+			while (std::getline(file, line)) {
 
-	//Print value
-	std::cout << "Normal string: " << string << std::endl;
-	std::cout << "Pointer string: "<< *stringPTR << std::endl;
-	std::cout << "Reference string: " << stringREF << std::endl;
+				}
+			}
+		std::cout << line << std::endl;
+		file.close();
+	}
+	else
+		std::cerr << "Usage: " << av[0] << " <filename> <char_to_replace> <char_to_replace_with>" << std::endl;
+	return 0;
 }
