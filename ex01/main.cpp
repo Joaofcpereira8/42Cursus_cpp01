@@ -10,12 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.h"
+#include "Zombie.hpp"
 
 int	main() {
-	int N = 5;
-	Zombie horde(N, "Zombie");
-	horde.announce(); // Announce for all zombies
+	int	amount = 10;
+	Zombie* horde = zombieHorde(amount, "Zombie");
+	for (int i = 0; i < amount; i++) {
+		horde[i].announce();
+	}
 
+	delete []horde;
 	return 0;
 }

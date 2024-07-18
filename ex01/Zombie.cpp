@@ -10,16 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.h"
+#include "Zombie.hpp"
+
+Zombie::Zombie() {
+}
 
 void	Zombie::announce(void) {
 	std::cout << name << ": BraiiiiiiinnnzzzZ..." << std::endl;
-}
-
-void	Zombie::hordeAnnounce(void) {
-	for (int i = 0; i < ; i++) {
-		zombies[i].announce();
-	}
 }
 
 Zombie::Zombie(const std::string &inputName) {

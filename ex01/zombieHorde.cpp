@@ -10,15 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.h"
+#include "Zombie.hpp"
 
 Zombie*	zombieHorde(int N, std::string name) {
-	// Allocate raw memory for N Zombies
-	Zombie* horde = static_cast<Zombie*>(operator new[](N * sizeof(Zombie)));
+	Zombie* horde;
 
-	// Construct each Zombie in the allocated memory
-	for (int i = 0; i < N; ++i) {
-		new (&horde[i]) Zombie(name); // Placement new
+	//Create a dynamic array of Zombie pointers
+	horde = new Zombie[N];
+	for (int i = 0; i < N; i++) {
+		new (&horde[i]) Zombie(name);
 	}
 
 	return horde;

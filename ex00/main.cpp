@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.h"
+#include "Zombie.hpp"
 
 int	main() {
 	Zombie* zombie = newZombie("Brozola");
