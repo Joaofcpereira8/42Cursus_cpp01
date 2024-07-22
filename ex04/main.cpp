@@ -12,7 +12,6 @@
 
 #include <iostream>
 #include <fstream>
-#include <string>
 
 std::string	replaceLetters(const std::string& line, const std::string& toReplace, const std::string& replace) {
 	std::string	newLine;
