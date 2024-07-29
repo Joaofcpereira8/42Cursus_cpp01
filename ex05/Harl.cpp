@@ -33,6 +33,10 @@ void	Harl::error() {
 
 void	Harl::complain(std::string level) {
 	void	(Harl::*func_ptr[4])() = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+	if (level.size() != 1 || std::isalpha(level[0])) {
+		std::cout << "Wrong type of level" << std::endl;
+		return;
+	}
 	int lev = atoi(level.c_str());
 	if (lev >= 0 && lev < 4)
 		(this->*func_ptr[lev])();

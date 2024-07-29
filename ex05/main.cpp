@@ -17,5 +17,5 @@ int	main() {
 	harl.complain("0");
 	harl.complain("1");
 	harl.complain("2");
-	harl.complain("4");
+	harl.complain("-1");
 }
