@@ -34,5 +34,8 @@ void	Harl::error() {
 void	Harl::complain(std::string level) {
 	void	(Harl::*func_ptr[4])() = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
 	int lev = atoi(level.c_str());
-	(this->*func_ptr[lev])();
+	if (lev >= 0 && lev < 4)
+		(this->*func_ptr[lev])();
+	else
+		std::cout << "Level inserted is not valid" << std::endl;
 }
