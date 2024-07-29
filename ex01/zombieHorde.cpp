@@ -13,10 +13,8 @@
 #include "Zombie.hpp"
 
 Zombie*	zombieHorde(int N, std::string name) {
-	Zombie* horde;
-
-	//Create a dynamic array of Zombie pointers
-	horde = new Zombie[N];
+	//Criamos um array dinamico de pointers de zombies
+	Zombie* horde = new Zombie[N];
 	for (int i = 0; i < N; i++) {
 		new (&horde[i]) Zombie(name);
 	}

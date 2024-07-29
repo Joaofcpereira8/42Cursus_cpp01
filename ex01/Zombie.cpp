@@ -15,12 +15,12 @@
 Zombie::Zombie() {
 }
 
-void	Zombie::announce(void) {
-	std::cout << name << ": BraiiiiiiinnnzzzZ..." << std::endl;
-}
-
 Zombie::Zombie(const std::string &inputName) {
 	name = inputName;
+}
+
+void	Zombie::announce(void) {
+	std::cout << name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
 
 Zombie::~Zombie() {

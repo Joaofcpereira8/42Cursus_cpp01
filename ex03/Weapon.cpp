@@ -16,13 +16,13 @@ Weapon::Weapon(std::string weapon) {
 	setType(weapon);
 }
 
-Weapon::~Weapon() {
+void	Weapon::setType(std::string typeWeapon) {
+	type = typeWeapon;
 }
 
 std::string Weapon::getType() const {
 	return type;
 }
 
-void	Weapon::setType(std::string typeWeapon) {
-	type = typeWeapon;
+Weapon::~Weapon() {
 }

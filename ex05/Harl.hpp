@@ -16,7 +16,6 @@
 #include <iostream>
 #include <cstdlib>
 
-
 class Harl {
 	private:
 		void	debug(void);

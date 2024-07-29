@@ -19,9 +19,9 @@ std::string	replaceLetters(const std::string& line, const std::string& toReplace
 	size_t findPos;
 
 	while ((findPos = line.find(toReplace, position)) != std::string::npos) {
-		newLine.append(line, position, findPos - position); //adiciona o antes da mudanca
-		newLine.append(replace); //adiciona a nova string/char
-		position = findPos + toReplace.length(); //passa a string/char inserida
+		newLine.append(line, position, findPos - position); //adiciona o antes da toReplace
+		newLine.append(replace); //adiciona a nova string/char (replace)
+		position = findPos + toReplace.length(); //passa a string/char(replace) inserida
 	}
 	newLine.append(line, position, line.length() - position); //adiciona o resto da frase
 

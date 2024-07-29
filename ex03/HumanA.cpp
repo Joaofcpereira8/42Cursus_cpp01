@@ -16,9 +16,9 @@ HumanA::HumanA(std::string nameHuman, Weapon &weaponName)
 		: name(nameHuman), weapon(weaponName) {
 }
 
-HumanA::~HumanA() {
-}
-
 void HumanA::attack() {
 	std::cout << name << " attacks with their " << weapon.getType() << std::endl;
+}
+
+HumanA::~HumanA() {
 }
