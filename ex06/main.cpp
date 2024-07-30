@@ -12,26 +12,12 @@
 
 #include "Harl.hpp"
 
-
-
 int	main(int ac, char **av) {
-	if (ac != 2)
-		std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
-	else {
-		Harl harl;
-		switch (ac) {
-			case 1:
-				harl.complain(av[1]);
-				break;
-			case 2:
-				harl.complain(av[1]);
-				break;
-			case 3:
-				harl.complain(av[1]);
-				break;
-			case 4:
-				harl.complain(av[1]);
-				break;
-		}
+	if (ac != 2) {
+		std::cout << "Need a complain!" << std::endl;
+		return 0;
 	}
+	Harl harl;
+	harl.complain(av[1]);
+	return 0;
 }

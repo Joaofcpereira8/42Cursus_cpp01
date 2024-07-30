@@ -19,7 +19,7 @@ int	main() {
 
 	//Print address
 	std::cout << "Normal string: " << &string << std::endl;
-	std::cout << "Pointer string: "<< &stringPTR << std::endl;
+	std::cout << "Pointer string: "<< stringPTR << std::endl;
 	std::cout << "Reference string: " << &stringREF << std::endl;
 
 	//Print value
