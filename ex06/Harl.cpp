@@ -48,6 +48,8 @@ void	Harl::complain(std::string level) {
 	{
 		if (level == levels[i])
 			index = i;
+		else
+			index = -1;
 	}
 	if (index >= 0 && index < 4) {
 		switch (index) {
