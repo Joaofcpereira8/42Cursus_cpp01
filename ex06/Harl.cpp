@@ -38,10 +38,16 @@ void	Harl::error() {
 void	Harl::complain(std::string level) {
 	void	(Harl::*func_ptr[4])() = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
 	std::string levels[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+	size_t index;
+	int size = level.size();
+	for (int i = 0; i < size; i++) {
+		if (isdigit(level[i]))
+			return ;
+	}
 	for (size_t i = 0; i < 4; i++)
 	{
 		if (level == levels[i])
-			size_t index = i;
+			index = i;
 	}
 	if (index >= 0 && index < 4) {
 		switch (index) {
