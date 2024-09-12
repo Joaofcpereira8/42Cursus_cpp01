@@ -46,8 +46,10 @@ void	Harl::complain(std::string level) {
 	}
 	for (size_t i = 0; i < 4; i++)
 	{
-		if (level == levels[i])
+		if (level == levels[i]) {
 			index = i;
+			break;
+		}
 		else
 			index = -1;
 	}
